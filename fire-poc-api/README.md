@@ -10,7 +10,10 @@ Password = admin
 
 The UI build files are added into the resource/static directory so that the single jar can run the both frond end and backend code.
 
-Running project :
+Running project:
 
 mvn clean install
+
+
+* Added JUnits and Integration tests . Some integration tests needs to be taken cared.
 
