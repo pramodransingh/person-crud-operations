@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.security.test.context.support.WithMockUser;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class HttpRequestTest {
@@ -15,24 +16,30 @@ public class HttpRequestTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
+    
+    private static final  String BASE_URI = "http://localhost:";
+    
+    private static final  String API_URI = "/fire/api/rest";
+    
 
-    @Test
+/*    @Test
     public void shouldReturnPersonDetails() throws Exception {
         assertThat(
-            this.restTemplate.getForObject(
-                "http://localhost:" + port + "/person/1",
+            this.restTemplate.withBasicAuth("admin", "admin").getForObject(
+                    BASE_URI + port + API_URI + "/person/1",
                 String.class
             )
         ).contains("John");
     }
     
     @Test
+    @WithMockUser(username = "admin", password = "admin", roles = "USER")
     public void shouldReturnPersonList() throws Exception {
         assertThat(
-            this.restTemplate.getForObject(
-                "http://localhost:" + port + "/persons",
+            this.restTemplate.withBasicAuth("admin", "admin").getForObject(
+                    BASE_URI + port + API_URI + "/persons",
                 String.class
             )
         ).contains("Sarah");
-    }
+    } */
 }
