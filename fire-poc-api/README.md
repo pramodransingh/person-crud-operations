@@ -15,5 +15,5 @@ Running project:
 mvn clean install
 
 
-* Added JUnits and Integration tests . Some integration tests needs to be taken cared.
+-- Added JUnits and Integration tests . Some integration tests needs to be taken cared.
 
