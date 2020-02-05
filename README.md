@@ -10,3 +10,10 @@ To run the application download the executable jar fire-poc-api-0.0.1-SNAPSHOT.j
 java -jar fire-poc-api-0.0.1-SNAPSHOT.jar
 
 after running the application visit http://localhost:8080 
+
+
+As we are using basic authentication here, we need to provide username and password to access the home page.
+
+Default username and password are:
+username = admin
+password = admin
